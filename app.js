@@ -82,8 +82,8 @@ const html = `
             margin-bottom: 16px;
             resize: vertical;
             box-sizing: border-box;
-            border: 1px solid #ccc; /* Viền cho input và textarea */
-            border-radius: 5px; /* Bo góc */
+            border: 1px solid #ccc;
+            border-radius: 5px; 
         }
         .contact-info input[type="submit"] {
             background-color: #4857e1;
@@ -126,14 +126,6 @@ const html = `
             </form>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <footer>
-        <p>Bản quyền © 2024 Trang Web Của Tôi. Đã được phát triển bởi Lò Văn Anh.</p>
-    </footer>
 </body>
 </html>
 `
