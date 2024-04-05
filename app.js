@@ -82,8 +82,8 @@ const html = `
             margin-bottom: 16px;
             resize: vertical;
             box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 5px; 
+            border: 1px solid #ccc; /* Viền cho input và textarea */
+            border-radius: 5px; /* Bo góc */
         }
         .contact-info input[type="submit"] {
             background-color: #4857e1;
@@ -100,8 +100,8 @@ const html = `
 </head>
 <body>
     <header>
-        <h1>Trang Web của Lò Văn Anh
-        </h1>
+        <h1> Lò Văn Anh</h1>
+        <h2>msv :22810310019 </h2>
     </header>
     <nav>
         <ul>
@@ -115,7 +115,7 @@ const html = `
         <h2> Chào mừng bạn đến với L.V.A </h2>
         <div class="contact-info">
             <h2>Liên Hệ</h2>
-            <form action="#" method="post">
+            <form id="contact-form" action="#" method="post">
                 <label for="name">Họ và Tên:</label><br>
                 <input type="text" id="name" name="name" required><br>
                 <label for="email">Email:</label><br>
@@ -124,8 +124,17 @@ const html = `
                 <textarea id="message" name="message" rows="4" required></textarea><br>
                 <input type="submit" value="Gửi">
             </form>
+            <div id="success-message" style="display: none; color: rgb(196, 231, 20);">Gửi thành công!</div>
         </div>
     </div>
+    
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('success-message').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
+
 `
